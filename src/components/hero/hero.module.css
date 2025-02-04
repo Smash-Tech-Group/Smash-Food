@@ -1,0 +1,38 @@
+.heroContainer {
+  position: relative;
+  overflow: hidden;
+}
+
+.title {
+  font-size: 80px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.smash {
+  color: var(--primary);
+}
+
+.image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.heroPhone {
+  display: block;
+  position: relative;
+}
+
+.food {
+  position: absolute;
+  bottom: 10%;
+  left: 25%;
+}
+
+.icon {
+  position: absolute;
+  top: 20%;
+  right: 8%;
+}

@@ -1,7 +1,54 @@
 .headerContainer {
-  position: fixed;
   top: 0;
   left: 0;
-  background-color: var(--secondary);
-  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 64px;
+  max-width: 100%;
+  overflow: hidden;
+  gap: 64px;
+}
+
+.navLinks ul {
+  display: flex;
+  color: var(--regular);
+  gap: 45px;
+}
+
+.navLinks ul li {
+  list-style: none;
+}
+.nav {
+  text-decoration: none;
+  color: var(--regular);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.getAppButton {
+  color: white;
+  background: var(--primary);
+  padding: 24px;
+  border-radius: 90px;
+  text-decoration: none;
+  position: relative;
+}
+
+.download {
+  padding: 24px 90px 24px 24px;
+  background-color: var(--primarylight);
+  border-radius: 90px;
+  position: absolute;
+  right: 139px;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

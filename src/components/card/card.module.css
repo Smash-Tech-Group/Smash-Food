@@ -1,0 +1,17 @@
+.card {
+  display: flex;
+  border: 1px solid var(--primary);
+  padding: 24px;
+
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  gap: 5px;
+  flex-direction: row;
+}
+
+.icon {
+  align-items: center;
+  justify-content: center;
+}
