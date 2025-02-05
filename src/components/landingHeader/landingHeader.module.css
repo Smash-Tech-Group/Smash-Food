@@ -52,3 +52,25 @@
   justify-content: center;
   align-items: center;
 }
+
+@media (max-width: 480px) {
+  .navLinks {
+    display: none;
+  }
+  .getAppButton {
+    display: none;
+  }
+  .logo {
+    width: 90px;
+    height: 16px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .navLinks {
+    display: none;
+  }
+  .getAppButton {
+    display: none;
+  }
+}

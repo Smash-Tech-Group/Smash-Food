@@ -5,12 +5,14 @@
 }
 
 body {
-  font-family: "Poppins", sans-serif; /* Use the Poppins font */
+  font-family: "Poppins", sans-serif;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 :root {
   --primary: rgba(0, 71, 43, 1);
   --primarylight: rgba(0, 71, 43, 0.2);
-  --secondary: #33c1ff;
+  --secondary: rgba(244, 166, 88, 1);
   --regular: rgba(59, 59, 59, 1);
 }

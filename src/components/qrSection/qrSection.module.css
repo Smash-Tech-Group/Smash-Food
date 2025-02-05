@@ -1,0 +1,173 @@
+/* Base styles (desktop and larger screens) */
+.container {
+  background-color: var(--primary);
+  /* padding-top: 70px;
+  padding-bottom: 150px; */
+  display: flex;
+  position: relative;
+  padding-bottom: 70px;
+}
+
+.title {
+  font-size: 70px;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  z-index: 1000;
+  right: 64px;
+  top: 17%;
+}
+
+.subTitle {
+  font-size: 20px;
+  font-weight: 400px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  line-height: 40px;
+  margin-bottom: 80px;
+}
+
+.qrCode {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 20px; /* Reduce gap for smaller screens */
+  margin-top: 70px;
+}
+
+.playstoreButton {
+  color: var(--regular);
+  background: white;
+  padding: 24px;
+  border-radius: 90px;
+  text-decoration: none;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+}
+
+.playstoreIcon {
+  margin-right: 10px;
+  font-weight: 500;
+}
+.foodImage {
+  width: 500px;
+}
+
+/* Mobile-first styles (default for smaller devices) */
+@media (max-width: 480px) {
+  .food {
+    width: 100px;
+    max-height: 100px;
+  }
+  .title {
+    font-size: 30px;
+
+    /* Adjust font size for very small screens */
+  }
+  .firstRow {
+    display: flex;
+    padding-right: 20px;
+    margin-bottom: 15px;
+  }
+
+  .container {
+    padding: 24px;
+  }
+
+  .subTitle {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  .code {
+    text-align: center;
+  }
+
+  .image {
+    height: 200px;
+  }
+
+  .buttons {
+    flex-direction: column; /* Stack buttons vertically on small screens */
+    gap: 15px;
+    margin-top: 40px;
+  }
+
+  .playstoreButton {
+    font-size: 12px;
+    padding: 16px 22px; /* Adjust padding */
+  }
+
+  .firstRow {
+    max-height: 100px;
+  }
+}
+
+/* Tablet size (up to 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .title {
+    font-size: 50px; /* Reduce font size for medium-sized devices */
+    margin-bottom: 5px;
+  }
+  /* .subTitle {
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 70px;
+  } */
+
+  .food {
+    height: 180px;
+  }
+  .firstRow {
+    display: flex;
+    margin-bottom: 50px;
+  }
+  .container {
+    padding: 32px;
+  }
+  .code {
+    text-align: center;
+  }
+  .buttons {
+    gap: 25px; /* Medium gap between buttons */
+  }
+
+  .playstoreButton {
+    font-size: 14px;
+    padding: 18px 24px;
+  }
+}
+
+/* Medium-sized devices (up to 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .title {
+    font-size: 6vw; /* Make it slightly larger again for tablets */
+  }
+  .foodImage {
+    width: 400px;
+  }
+  .firstRow {
+    display: flex;
+    margin-bottom: 5px;
+  }
+}
+
+/* Large screens (1280px and up) */
+@media screen and (min-width: 1280px) {
+}

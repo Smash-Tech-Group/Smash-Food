@@ -3,9 +3,17 @@ import styles from "./hero.module.css";
 import { Icon } from "@components/icon";
 import Image from "next/image";
 import heroPhone from "../../../public/assets/heroPhone.svg";
+import playStore from "../../../public/assets/playstore.svg";
+import apple from "../../../public/assets/apple.svg";
 import { Button } from "@components/button";
+import Link from "next/link";
+import { useMedia } from "react-use";
+import { Heroimage } from "@components/HeroImage";
 
 export const Hero = () => {
+  const isTablet = useMedia("(max-width: 560px)");
+  const isMobile = useMedia("(max-width: 558px)");
+
   return (
     <div className={styles.heroContainer}>
       <div className={styles.blur}></div>
@@ -15,7 +23,7 @@ export const Hero = () => {
           with <span className={styles.smash}>Smashfood</span>{" "}
         </div>
       </div>
-      <div className={styles.image}>
+      {/* <div className={styles.image}>
         <Image
           src={heroPhone}
           alt="heroImage"
@@ -29,8 +37,33 @@ export const Hero = () => {
           width={267.01}
           className={styles.icon}
         />
+      </div> */}
+      <div className={styles.heroImage}>
+        <Heroimage />
       </div>
-      <div></div>
+
+      <div className={styles.buttons}>
+        <Link href="" className={styles.playstoreButton}>
+          <Image
+            src={playStore}
+            alt="playstore"
+            height={24}
+            width={24}
+            className={styles.playstoreIcon}
+          />
+          Download on Google Play
+        </Link>
+        <Link href="" className={styles.playstoreButton}>
+          <Image
+            src={apple}
+            alt="apple"
+            height={24}
+            width={24}
+            className={styles.playstoreIcon}
+          />
+          Download on App store
+        </Link>
+      </div>
     </div>
   );
 };

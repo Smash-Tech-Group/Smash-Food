@@ -4,6 +4,7 @@ import { Icon } from "@components/icon";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { Button } from "@components";
+import { useMedia } from "react-use";
 
 export const LandingHeader: React.FC = () => {
   const router = useRouter();
@@ -16,6 +17,7 @@ export const LandingHeader: React.FC = () => {
       <div>
         <Icon icon="logo" height={32} width={189.71} className={styles.logo} />
       </div>
+
       <div className={styles.navLinks}>
         <ul>
           <li>
@@ -73,11 +75,8 @@ export const LandingHeader: React.FC = () => {
         </ul>
       </div>
       <div className={styles.button}>
-        <Link href="" className={styles.download}>
-          <Icon icon="download" height={18} width={12} />
-        </Link>
         <Link className={styles.getAppButton} href="">
-          Get the App
+          Get Started
         </Link>
       </div>
     </div>

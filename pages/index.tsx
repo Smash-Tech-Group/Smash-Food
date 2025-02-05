@@ -1,10 +1,13 @@
 import React, { useState, ReactElement } from "react";
 import Script from "next/script";
-import { WebsiteLayout, Card } from "@components";
+import { WebsiteLayout, Card, QrSection } from "@components";
 import { Icon } from "@components/icon";
 import { useMedia } from "react-use";
 import { Button } from "@components/button";
 import { Hero } from "@components";
+import Slider from "@components/slider";
+import { CreateAccount } from "@components/createAccount";
+import CustomSlider from "@components/slider";
 
 const Home = () => {
   const [name, setName] = useState("hafsat");
@@ -42,6 +45,10 @@ const Home = () => {
   return (
     <div>
       <Hero />
+      <CustomSlider />
+      <QrSection />
+
+      {/* <CreateAccount />  */}
     </div>
   );
 };
