@@ -81,6 +81,9 @@
 }
 
 @media (max-width: 480px) {
+  .heroContainer {
+    margin-top: 60px;
+  }
   .title {
     font-size: 30px;
   }

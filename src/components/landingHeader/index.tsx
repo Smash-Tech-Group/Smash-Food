@@ -10,6 +10,7 @@ import Image from "next/image";
 import { Button } from "@components";
 import { useMedia } from "react-use";
 import { useScroll } from "../../hooks/useScroll";
+import logo from "../../../public/assets/logo.svg";
 
 export const LandingHeader: React.FC = () => {
   const router = useRouter();
@@ -59,7 +60,7 @@ export const LandingHeader: React.FC = () => {
       className={styles.headerContainer}
     >
       <div>
-        <Icon icon="logo" height={32} width={189.71} className={styles.logo} />
+        <Image src={logo} alt="logo" className={styles.logo} />
       </div>
 
       <div className={styles.navLinks}>
@@ -125,7 +126,10 @@ export const LandingHeader: React.FC = () => {
         </Link>
       </div>
 
-      <div className={styles.hamburgerMenu} onClick={toggleMenu}>
+      <div
+        className={`${styles.hamburgerMenu} ${isMenuOpen ? styles.open : ""}`}
+        onClick={toggleMenu}
+      >
         {isMenuOpen ? (
           <Image src={openhamburger} alt="open" width={42} />
         ) : (
@@ -133,45 +137,35 @@ export const LandingHeader: React.FC = () => {
         )}
       </div>
 
-      {isMenuOpen && (
-        <div className={styles.dropdownMenu}>
-          <ul>
-            <li>
-              <Link href="/" className={styles.nav}>
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link href="/about" className={styles.nav}>
-                About Us
-              </Link>
-            </li>
-            <li>
-              <Link href="/contact" className={styles.nav}>
-                Contact Us
-              </Link>
-            </li>
-            <li>
-              <Link href="/faq" className={styles.nav}>
-                FAQ's
-              </Link>
-            </li>
-            <li>
-              <Link className={styles.getAppButton} href="">
-                Get Started
-              </Link>
-            </li>
-          </ul>
-        </div>
-      )}
+      <div className={`${styles.dropdownMenu} ${isMenuOpen ? "open" : ""}`}>
+        <ul>
+          <li>
+            <Link href="/" className={styles.nav}>
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link href="/about" className={styles.nav}>
+              About Us
+            </Link>
+          </li>
+          <li>
+            <Link href="/contact" className={styles.nav}>
+              Contact Us
+            </Link>
+          </li>
+          <li>
+            <Link href="/faq" className={styles.nav}>
+              FAQ's
+            </Link>
+          </li>
+          <li>
+            <Link className={styles.getAppButton} href="">
+              Get Started
+            </Link>
+          </li>
+        </ul>
+      </div>
     </div>
   );
 };
-
-// {!isMenuOpen ? (
-//   <Image src={hamburger} alt="hamburger" width={32} />
-// ) : showOpenHamburger ? (
-//   <Image src={openhamburger} alt="open hamburger" width={40} />
-// ) : (
-//   <Image src={cancel} alt="cancel" width={20} />
-// )}

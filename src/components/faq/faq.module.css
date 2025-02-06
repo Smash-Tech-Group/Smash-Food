@@ -28,18 +28,25 @@
   justify-content: space-between;
   align-items: center;
   cursor: pointer; /* Change cursor to pointer to indicate it's clickable */
+  transition: transform 0.3s ease; /* Smooth transition for the wrapper */
 }
 
+/* Apply transition to rotation */
+.rotated {
+  transform: rotate(-45deg); /* Rotate the plus icon to form an "X" */
+  transition: transform 0.3s ease; /* Smooth transition for rotation */
+}
+
+/* Ensure the icon is in its default state when closed */
+.wrapper > img {
+  transition: transform 0.3s ease; /* Smooth transition for rotation back to plus */
+}
 .answer {
   font-size: 20px;
   font-weight: 300;
   margin-top: 20px;
 }
 
-.rotated {
-  transform: rotate(-45deg); /* Rotate the plus icon to form an "X" */
-  transition: transform 0.3s ease; /* Smooth transition for rotation */
-}
 .antiRotated {
   transform: rotate(-45deg); /* Rotate the plus icon to form an "X" */
   transition: transform 0.3s ease; /* Smooth transition for rotation */

@@ -12,6 +12,11 @@ import Outline from "./outline";
 import PlayStore from "./playStore";
 import Apple from "./apple";
 import Download from "./download";
+import Tiktok from "./tiktok";
+import Twitter from "./twitter";
+import Instagram from "./instagram";
+import Linkedin from "./linkedin";
+import Facebook from "./facebook";
 
 export const Icons = {
   clock: Clock,
@@ -28,4 +33,9 @@ export const Icons = {
   playStore: PlayStore,
   apple: Apple,
   download: Download,
+  tiktok: Tiktok,
+  twitter: Twitter,
+  facebook: Facebook,
+  instagram: Instagram,
+  linkedin: Linkedin,
 };

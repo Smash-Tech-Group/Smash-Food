@@ -66,13 +66,30 @@
   position: absolute;
   z-index: 20;
 }
+.logo {
+  max-width: 100%;
+}
 
 @media (max-width: 480px) {
+  .buttons {
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+
+  .playstoreButton {
+    font-size: 12px;
+    padding: 16px 24px;
+  }
+  .logo {
+    width: 150px;
+    height: 50%;
+  }
   .headerContainer {
-    padding-left: 30px;
-    padding-right: 30px;
+    max-width: 100%;
+    padding: 24px 28px 24px 28px;
     max-height: 80px;
-    width: 100%;
   }
   .navLinks {
     display: none;
@@ -96,8 +113,15 @@
     flex-direction: column;
     padding: 20px;
     gap: 20px;
+    display: none;
+    transition: transform 0.5s ease-in-out; /* Slower transition */
+    transform: translateY(-100%); /* Start from hidden position */
   }
 
+  .dropdownMenu.open {
+    display: flex;
+    transform: translateY(0); /* Slide down effect */
+  }
   .dropdownMenu ul {
     display: flex;
     flex-direction: column;
@@ -106,6 +130,10 @@
 
   .dropdownMenu li {
     list-style: none;
+  }
+
+  .footerBottom {
+    margin-top: 20px;
   }
 }
 
@@ -124,8 +152,8 @@
 
   .logo {
     max-width: 100%;
-    height: auto;
-    width: auto; /* Let the width adjust naturally based on height */
+    height: 20px;
+    width: 20px; /* Let the width adjust naturally based on height */
   }
 
   .dropdownMenu {
