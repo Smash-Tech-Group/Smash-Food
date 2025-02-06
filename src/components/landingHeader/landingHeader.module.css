@@ -69,7 +69,10 @@
 
 @media (max-width: 480px) {
   .headerContainer {
-    padding: 24px;
+    padding-left: 30px;
+    padding-right: 30px;
+    max-height: 80px;
+    width: 100%;
   }
   .navLinks {
     display: none;
