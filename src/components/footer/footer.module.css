@@ -1,27 +1,25 @@
 .footerContainer {
-  background-color: #333;
-  color: white;
-  padding: 2rem 0;
-  font-family: Arial, sans-serif;
+  background-color: rgba(250, 250, 250, 1);
+  color: var(--regular);
+
   width: 100%;
-  position: fixed;
+  position: relative;
   bottom: 0;
   left: 0;
 }
 
 .footerSections {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   gap: 1.5rem;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 2rem;
 }
 
-.section h4 {
-  font-size: 1.25rem;
+.section span {
+  font-size: 20px;
   margin-bottom: 1rem;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .section ul {
@@ -31,9 +29,9 @@
 
 .section li {
   margin: 1.5rem 0;
-  font-size: 0.9rem;
+  font-size: 20px;
+  font-weight: 300;
   cursor: pointer;
-  transition: color 0.3s ease;
 }
 
 .section li:hover {
@@ -42,9 +40,19 @@
 
 .copyright {
   text-align: center;
-  padding: 1rem 0;
+
   background-color: #222;
   font-size: 0.875rem;
+}
+
+.icon {
+  margin-right: 5px;
+  margin-top: 3px;
+}
+
+.heading {
+  display: flex;
+  align-items: center;
 }
 
 @media (max-width: 768px) {

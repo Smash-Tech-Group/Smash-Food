@@ -2,48 +2,51 @@ import React from "react";
 import styles from "./footer.module.css";
 import { useRouter } from "next/router";
 import ROUTES from "@utils/routes";
+import Image from "next/image";
+import { Icon } from "@components/icon";
+import spiral from "../../../public/assets/spiral.svg";
+import ellipse from "../../../public/assets/ellipse.svg";
+import str from "../../../public/assets/str.svg";
 
 export const Footer: React.FC = () => {
   const router = useRouter();
   return (
     <div className={styles.footerContainer}>
       <div className={styles.footerSections}>
+        <section>
+          <Icon icon="logo" width={189.71} height={32} />
+        </section>
         <section className={styles.section}>
-          <h4>Product</h4>
+          <span className={styles.heading}>
+            <Image src={spiral} alt="spiral" className={styles.icon} />
+            Smashfood
+          </span>
           <ul>
-            <li onClick={() => router.push(ROUTES.ABOUT)}>Features</li>
-            <li>Pricing</li>
-            <li>Download</li>
+            <li>Cooked Meals Delivery</li>
+            <li>Grocery Delivery</li>
+            <li>Raw Food Delivery </li>
           </ul>
         </section>
         <section className={styles.section}>
-          <h4>Company</h4>
+          <span>
+            <Image src={ellipse} alt="spiral" className={styles.icon} />
+            Partner With Smashfood
+          </span>
+          <ul>
+            <li>Become a Delivery Agent</li>
+            <li>Become a Vendor</li>
+            <li>Franchise</li>
+          </ul>
+        </section>
+        <section className={styles.section}>
+          <span>
+            <Image src={str} alt="spiral" className={styles.icon} />
+            Company
+          </span>
           <ul>
             <li>About Us</li>
-            <li>Careers</li>
-            <li>Press</li>
-          </ul>
-        </section>
-        <section className={styles.section}>
-          <h4>Resources</h4>
-          <ul>
-            <li>Blog</li>
-            <li>FAQ</li>
-            <li>Help Center</li>
-          </ul>
-        </section>
-        <section className={styles.section}>
-          <h4>Contact</h4>
-          <ul>
-            <li>Email</li>
-            <li>Support</li>
-          </ul>
-        </section>
-        <section className={styles.section}>
-          <h4>Legal</h4>
-          <ul>
-            <li>Privacy Policy</li>
-            <li>Terms of Service</li>
+            <li>Contact US</li>
+            <li>FAQ’s</li>
           </ul>
         </section>
       </div>

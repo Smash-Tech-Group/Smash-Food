@@ -2,39 +2,82 @@
   background-color: var(--secondary);
   margin: 64px;
   border-radius: 24px;
-  padding: 24px 24px;
+  position: relative;
   display: flex;
+  justify-content: space-between;
+  padding: 40px 60px 40px 70px;
+}
+
+.account {
+  width: 339.94px;
+  height: 672px;
 }
 
 .getStarted {
   display: flex;
-  align-items: center;
-
+  justify-content: flex-end;
   gap: 6px;
 }
 
 .getStartedText {
   font-size: 32px;
-
   color: white;
   text-align: end;
 }
 
 .title {
-  font-size: 80px;
+  font-size: 70px;
   font-weight: 700;
   color: white;
 }
 
 .subtitle {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 400;
   color: white;
   display: flex;
   flex-direction: column;
   line-height: 40px;
 }
+
 .contentContainer {
   padding: 20px;
-  border: 1px soid white;
+}
+
+.button {
+  background-color: var(--primary);
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.arrows {
+  display: flex;
+  justify-content: end;
+  gap: 15px;
+  position: absolute;
+  right: 60px;
+  bottom: 25%;
+}
+
+.indicators {
+  display: flex;
+  gap: 10px;
+  position: absolute;
+  right: 60px;
+  bottom: 15%;
+}
+
+.slideContent {
+  padding-top: 20px;
+}
+
+.slideText {
+  font-size: 18px;
+  font-weight: 400;
+  color: white;
+  text-align: center;
 }

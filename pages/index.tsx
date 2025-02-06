@@ -8,6 +8,7 @@ import { Hero } from "@components";
 import Slider from "@components/slider";
 import { CreateAccount } from "@components/createAccount";
 import CustomSlider from "@components/slider";
+import Faq from "@components/faq";
 
 const Home = () => {
   const [name, setName] = useState("hafsat");
@@ -47,8 +48,8 @@ const Home = () => {
       <Hero />
       <CustomSlider />
       <QrSection />
-
-      {/* <CreateAccount />  */}
+      {/* <CreateAccount /> */}
+      <Faq />
     </div>
   );
 };

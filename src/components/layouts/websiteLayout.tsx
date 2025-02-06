@@ -7,7 +7,7 @@ export const WebsiteLayout = ({ children }: any) => {
       <LandingHeader />
 
       <main>{children}</main>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 };

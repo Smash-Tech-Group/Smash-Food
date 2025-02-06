@@ -1,0 +1,78 @@
+.faqContainer {
+  padding-bottom: 45px;
+}
+.title {
+  font-size: 70px;
+  font-weight: 700;
+  text-align: center;
+  color: var(--regular);
+  padding-bottom: 45px;
+}
+
+.cardContainer {
+  margin-left: 300px;
+  margin-right: 300px;
+}
+
+.card {
+  border: 1px solid var(--primary);
+  font-size: 20px;
+  font-weight: 600;
+  padding: 24px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer; /* Change cursor to pointer to indicate it's clickable */
+}
+
+.answer {
+  font-size: 20px;
+  font-weight: 300;
+  margin-top: 20px;
+}
+
+.rotated {
+  transform: rotate(-45deg); /* Rotate the plus icon to form an "X" */
+  transition: transform 0.3s ease; /* Smooth transition for rotation */
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 30px;
+  }
+
+  .cardContainer {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .card {
+    font-size: 14px;
+  }
+
+  .answer {
+    font-size: 12px;
+    font-weight: 300;
+    margin-top: 20px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .title {
+    font-size: 50px;
+  }
+
+  .cardContainer {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
+  .card {
+    font-size: 20px;
+  }
+}

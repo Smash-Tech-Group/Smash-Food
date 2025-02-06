@@ -15,7 +15,7 @@ type AppPropsWithLayout = AppProps & {
   pageProps: Record<string, unknown>;
 };
 const poppins = Poppins({
-  weight: ["400", "500", "700"],
+  weight: ["300", "400", "500", "700"],
   style: ["normal"],
   subsets: ["latin"],
 });
