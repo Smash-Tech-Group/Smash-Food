@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import heroPhone from "../../../public/assets/heroPhone.svg";
+import herophone from "../../../public/assets/herophone.svg";
 import food from "../../../public/assets/food.svg";
 import line from "../../../public/assets/line.svg";
 import styles from "./heroImage.module.css";
@@ -9,7 +9,7 @@ export const Heroimage = () => {
   return (
     <div className={styles.heroContainer}>
       <Image
-        src={heroPhone}
+        src={herophone}
         alt="heroImage"
         className={styles.heroPhone}
         width={471}
