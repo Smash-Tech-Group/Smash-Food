@@ -9,7 +9,7 @@ export const Heroimage = () => {
   return (
     <div className={styles.heroContainer}>
       <Image
-        src={heroPhone.svg}
+        src={heroPhone}
         alt="heroImage"
         className={styles.heroPhone}
         width={471}
