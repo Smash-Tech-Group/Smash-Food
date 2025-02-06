@@ -8,7 +8,7 @@ import styles from "./heroImage.module.css";
 export const Heroimage = () => {
   return (
     <div className={styles.heroContainer}>
-      <img
+      <Image
         src={herophone}
         alt="heroImage"
         className={styles.heroPhone}
