@@ -28,7 +28,7 @@ export const Hero = () => {
       >
         <div>Savour Naija’s Flavours</div>
         <div>
-          with <span className={styles.smash}>Smashfood</span>{" "}
+          with <span className={styles.smash}>SmashFood</span>{" "}
         </div>
       </motion.div>
       {/* <div className={styles.image}>
