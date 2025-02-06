@@ -26,9 +26,9 @@ export const LandingHeader: React.FC = () => {
     // Show the open hamburger icon temporarily for 500ms
     setShowOpenHamburger(true);
 
-    setTimeout(() => {
-      setShowOpenHamburger(false); // Hide after 500ms
-    }, 300);
+    // setTimeout(() => {
+    //   setShowOpenHamburger(false); // Hide after 500ms
+    // }, 300);
   };
 
   const { scrollY, scrollX, scrollDirection, atTop } = useScroll();
@@ -57,7 +57,7 @@ export const LandingHeader: React.FC = () => {
   return (
     <div
       style={
-        atTop || scrollDirection === "down" ? styling.active : styling.hidden
+        atTop || scrollDirection === "up" ? styling.active : styling.hidden
       }
       className={styles.headerContainer}
     >
