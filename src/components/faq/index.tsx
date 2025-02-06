@@ -59,7 +59,7 @@ const Faq = () => {
                 >
                   <span className={styles.question}>{content.question}</span>
                   <Image
-                    src={plus} // Always use the 'plus' image
+                    src={plus}
                     alt="plus"
                     className={isOpen ? styles.rotated : ""}
                   />

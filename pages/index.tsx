@@ -48,7 +48,7 @@ const Home = () => {
       <Hero />
       <CustomSlider />
       <QrSection />
-      {/* <CreateAccount /> */}
+      <CreateAccount />
       <Faq />
     </div>
   );

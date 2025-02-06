@@ -5,6 +5,7 @@ import type { NextPage } from "next";
 import { Poppins } from "next/font/google";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { Breakpoint, BreakpointProvider } from "react-socks";
 
 export type NextPageWithLayout<P = unknown, IP = P> = NextPage<P, IP> & {
   getLayout?: (page: ReactElement) => ReactNode;

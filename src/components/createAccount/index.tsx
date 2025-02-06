@@ -79,7 +79,7 @@ export const CreateAccount = () => {
 
   return (
     <div className={styles.container}>
-      <div>
+      <div className={styles.imageContainer}>
         <Image
           src={slides[currentSlide].image}
           alt="Slide Image"
@@ -88,7 +88,7 @@ export const CreateAccount = () => {
       </div>
       <div className={styles.contentContainer}>
         <span className={styles.getStarted}>
-          <Image src={account} alt="Account" />
+          <Image src={account} alt="Account" className={styles.star} />
           <span className={styles.getStartedText}>How To Get Started</span>
         </span>
         <div className={styles.content}>
@@ -112,6 +112,7 @@ export const CreateAccount = () => {
                 key={index}
                 src={index === currentSlide ? greenRectangle : whiteRectangle}
                 alt={`Indicator ${index + 1}`}
+                className={styles.indicator}
               />
             ))}
           </div>

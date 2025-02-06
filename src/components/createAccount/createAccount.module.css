@@ -11,6 +11,8 @@
 .account {
   width: 339.94px;
   height: 672px;
+  transition-delay: 10ms;
+  transition-timing-function: ease;
 }
 
 .getStarted {
@@ -80,4 +82,126 @@
   font-weight: 400;
   color: white;
   text-align: center;
+}
+
+@media (max-width: 480px) {
+  .container {
+    margin: 24px;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    padding: 10px;
+    padding-bottom: 48px;
+  }
+  .account {
+    width: 200px;
+    height: 380px;
+  }
+  .getStartedText {
+    font-size: 24px;
+    gap: 6px;
+    margin-bottom: 12px;
+  }
+
+  .imageContainer {
+    text-align: center;
+  }
+
+  .title {
+    font-size: 30px;
+    text-align: left;
+    margin-top: 8px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+    display: block;
+    line-height: 35px;
+  }
+  .arrows {
+    display: none;
+  }
+
+  .indicator {
+    width: 30px;
+  }
+  .indicators {
+    position: absolute;
+    right: 32%;
+    bottom: 24px;
+    gap: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .star {
+    width: 20px;
+    margin-bottom: 15px;
+  }
+
+  .getStarted {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+}
+@media (min-width: 480px) and (max-width: 768px) {
+  .container {
+    margin: 24px;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    padding: 10px;
+    padding-bottom: 48px;
+  }
+  .account {
+    height: 500px;
+  }
+  .getStartedText {
+    font-size: 30px;
+    gap: 6px;
+    margin-bottom: 12px;
+  }
+
+  .imageContainer {
+    text-align: center;
+  }
+
+  .title {
+    font-size: 50px;
+    text-align: left;
+    margin-top: 8px;
+  }
+
+  .subtitle {
+    display: block;
+  }
+  .arrows {
+    display: none;
+  }
+
+  .indicator {
+    width: 50px;
+  }
+  .indicators {
+    position: absolute;
+    right: 35%;
+    bottom: 24px;
+    gap: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .star {
+    width: 20px;
+    margin-bottom: 15px;
+  }
+
+  .getStarted {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
 }

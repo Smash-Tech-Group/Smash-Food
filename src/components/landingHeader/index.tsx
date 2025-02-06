@@ -9,6 +9,7 @@ import cancel from "../../../public/assets/cancel.svg"; // Assuming you have a c
 import Image from "next/image";
 import { Button } from "@components";
 import { useMedia } from "react-use";
+import { useScroll } from "../../hooks/useScroll";
 
 export const LandingHeader: React.FC = () => {
   const router = useRouter();
@@ -29,8 +30,34 @@ export const LandingHeader: React.FC = () => {
     }, 300);
   };
 
+  const { scrollY, scrollX, scrollDirection } = useScroll();
+
+  type CSSProperties = {
+    visibility: "visible" | "hidden" | "collapse";
+    transition: string;
+    transform?: string; // transform is optional
+  };
+
+  const styling: {
+    active: CSSProperties;
+    hidden: CSSProperties;
+  } = {
+    active: {
+      visibility: "visible",
+      transition: "all 0.5s",
+    },
+    hidden: {
+      visibility: "hidden",
+      transition: "all 0.5s",
+      transform: "translateY(-100%)",
+    },
+  };
+
   return (
-    <div className={styles.headerContainer}>
+    <div
+      style={scrollDirection === "down" ? styling.active : styling.hidden}
+      className={styles.headerContainer}
+    >
       <div>
         <Icon icon="logo" height={32} width={189.71} className={styles.logo} />
       </div>
@@ -99,13 +126,10 @@ export const LandingHeader: React.FC = () => {
       </div>
 
       <div className={styles.hamburgerMenu} onClick={toggleMenu}>
-        {/* Show the hamburger or the open hamburger/cancel icon based on the menu state */}
-        {!isMenuOpen ? (
-          <Image src={hamburger} alt="hamburger" width={26} />
-        ) : showOpenHamburger ? (
-          <Image src={openhamburger} alt="open hamburger" width={32} />
+        {isMenuOpen ? (
+          <Image src={openhamburger} alt="open" width={42} />
         ) : (
-          <Image src={cancel} alt="cancel" width={20} />
+          <Image src={hamburger} alt="close" width={32} />
         )}
       </div>
 
@@ -143,3 +167,11 @@ export const LandingHeader: React.FC = () => {
     </div>
   );
 };
+
+// {!isMenuOpen ? (
+//   <Image src={hamburger} alt="hamburger" width={32} />
+// ) : showOpenHamburger ? (
+//   <Image src={openhamburger} alt="open hamburger" width={40} />
+// ) : (
+//   <Image src={cancel} alt="cancel" width={20} />
+// )}

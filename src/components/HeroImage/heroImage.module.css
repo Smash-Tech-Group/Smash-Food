@@ -78,13 +78,13 @@
   }
   .food {
     left: 12%;
-    bottom: 35%;
+    bottom: 30%;
     max-width: 21%;
   }
 
   .line {
     right: 2%;
-    bottom: 47%;
+    bottom: 43%;
     width: 20%;
   }
 }

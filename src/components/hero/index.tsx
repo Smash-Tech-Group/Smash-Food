@@ -9,6 +9,7 @@ import { Button } from "@components/button";
 import Link from "next/link";
 import { useMedia } from "react-use";
 import { Heroimage } from "@components/HeroImage";
+import { motion } from "framer-motion";
 
 export const Hero = () => {
   const isTablet = useMedia("(max-width: 560px)");
@@ -16,13 +17,20 @@ export const Hero = () => {
 
   return (
     <div className={styles.heroContainer}>
-      <div className={styles.blur}></div>
-      <div className={styles.title}>
+      <motion.div
+        initial={{ opacity: 0, y: 100 }}
+        animate={{
+          opacity: 1,
+          y: 0,
+          transition: { duration: 0.5 },
+        }}
+        className={styles.title}
+      >
         <div>Savour Naija’s Flavours</div>
         <div>
           with <span className={styles.smash}>Smashfood</span>{" "}
         </div>
-      </div>
+      </motion.div>
       {/* <div className={styles.image}>
         <Image
           src={heroPhone}
@@ -38,9 +46,17 @@ export const Hero = () => {
           className={styles.icon}
         />
       </div> */}
-      <div className={styles.heroImage}>
+      <motion.div
+        initial={{ opacity: 0, y: 100 }}
+        animate={{
+          opacity: 1,
+          y: 0,
+          transition: { duration: 0.5 },
+        }}
+        className={styles.heroImage}
+      >
         <Heroimage />
-      </div>
+      </motion.div>
 
       <div className={styles.buttons}>
         <Link href="" className={styles.playstoreButton}>
@@ -57,13 +73,14 @@ export const Hero = () => {
           <Image
             src={apple}
             alt="apple"
-            height={24}
-            width={24}
+            height={26}
+            width={26}
             className={styles.playstoreIcon}
           />
           Download on App store
         </Link>
       </div>
+      <div className={styles.blur}></div>
     </div>
   );
 };

@@ -6,7 +6,7 @@
   font-weight: 700;
   text-align: center;
   color: var(--regular);
-  padding-bottom: 45px;
+  margin-bottom: 45px;
 }
 
 .cardContainer {
@@ -40,10 +40,18 @@
   transform: rotate(-45deg); /* Rotate the plus icon to form an "X" */
   transition: transform 0.3s ease; /* Smooth transition for rotation */
 }
+.antiRotated {
+  transform: rotate(-45deg); /* Rotate the plus icon to form an "X" */
+  transition: transform 0.3s ease; /* Smooth transition for rotation */
+}
 
 @media (max-width: 480px) {
+  .faqContainer {
+    padding-bottom: 0;
+  }
   .title {
     font-size: 30px;
+    margin-bottom: 24px;
   }
 
   .cardContainer {
@@ -53,6 +61,7 @@
 
   .card {
     font-size: 14px;
+    margin-bottom: 20px;
   }
 
   .answer {

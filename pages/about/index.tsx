@@ -1,13 +1,19 @@
-import React, { ReactElement } from "react";
-import { DashboardLayout } from "@components/layouts/dashboardLayout";
-import { WebsiteLayout } from "@components/index";
+"use client";
+import { motion } from "framer-motion";
 
-const About = () => {
-  return <div>About</div>;
-};
-
-About.getLayout = function getLayout(page: ReactElement) {
-  return <WebsiteLayout>{page}</WebsiteLayout>;
-};
-
-export default About;
+export default function Home() {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 100 }}
+      animate={{
+        opacity: 1,
+        y: 0,
+        transition: { duration: 0.5 },
+      }}
+    >
+      <div>
+        <h1>Welcome to the Home Page</h1>
+      </div>
+    </motion.div>
+  );
+}

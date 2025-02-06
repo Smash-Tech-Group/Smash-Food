@@ -39,10 +39,11 @@
 .getAppButton {
   color: white;
   background: var(--primary);
-  padding: 24px;
+  padding: 22px;
   border-radius: 90px;
   text-decoration: none;
   position: relative;
+  font-size: 16px;
 }
 
 .button {
@@ -58,7 +59,54 @@
   display: none;
 }
 
-@media (max-width: 768px) {
+.blur {
+  background-color: black;
+  height: 200px;
+  width: 100%;
+  position: absolute;
+  z-index: 20;
+}
+
+@media (max-width: 480px) {
+  .headerContainer {
+    padding: 24px;
+  }
+  .navLinks {
+    display: none;
+  }
+
+  .getAppButton {
+    display: none;
+  }
+
+  .hamburgerMenu {
+    display: block;
+  }
+
+  .dropdownMenu {
+    position: absolute;
+    top: 200px;
+    left: 0;
+    right: 0;
+    background: black;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .dropdownMenu ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .dropdownMenu li {
+    list-style: none;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
   .navLinks {
     display: none;
   }
@@ -82,7 +130,7 @@
     top: 200px;
     left: 0;
     right: 0;
-    background: white;
+    background: black;
     display: flex;
     flex-direction: column;
     padding: 20px;

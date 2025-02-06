@@ -6,6 +6,7 @@
   display: flex;
   position: relative;
   padding-bottom: 70px;
+  z-index: -10;
 }
 
 .title {
@@ -72,6 +73,9 @@
 
 /* Mobile-first styles (default for smaller devices) */
 @media (max-width: 480px) {
+  .container {
+    padding-bottom: 20px;
+  }
   .food {
     width: 100px;
     max-height: 100px;
@@ -94,6 +98,7 @@
   .subTitle {
     font-size: 14px;
     margin-bottom: 20px;
+    line-height: 35px;
   }
   .code {
     text-align: center;
@@ -106,7 +111,7 @@
   .buttons {
     flex-direction: column; /* Stack buttons vertically on small screens */
     gap: 15px;
-    margin-top: 40px;
+    margin-top: 24px;
   }
 
   .playstoreButton {
