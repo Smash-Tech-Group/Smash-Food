@@ -1,40 +1,41 @@
 import { useState, useEffect } from "react";
 
 export function useScroll() {
-  // Storing last scroll position to detect direction
   const [lastScrollTop, setLastScrollTop] = useState(0);
-
-  // State for scroll position and direction
   const [scrollY, setScrollY] = useState(0);
   const [scrollX, setScrollX] = useState(0);
   const [scrollDirection, setScrollDirection] = useState("");
-
-  // Listener for scroll events
-  const listener = () => {
-    const bodyOffset = document.body.getBoundingClientRect();
-
-    setScrollY(-bodyOffset.top); // Update vertical scroll position
-    setScrollX(bodyOffset.left); // Update horizontal scroll position
-
-    // Update scroll direction (up or down)
-    const direction = lastScrollTop > -bodyOffset.top ? "down" : "up";
-    setScrollDirection(direction);
-    setLastScrollTop(-bodyOffset.top); // Store last scroll position
-  };
+  const [atTop, setAtTop] = useState(true); // New state to track top position
 
   useEffect(() => {
-    // Add scroll event listener when component mounts
+    if (typeof window === "undefined") return; // Avoid SSR issues
+
+    const listener = () => {
+      const currentScrollY = window.scrollY;
+      const currentScrollX = window.scrollX;
+
+      setScrollY(currentScrollY);
+      setScrollX(currentScrollX);
+
+      const direction = lastScrollTop > currentScrollY ? "up" : "down";
+      setScrollDirection(direction);
+      setLastScrollTop(currentScrollY);
+
+      // Set atTop to true if we're at the top of the page
+      setAtTop(currentScrollY === 0);
+    };
+
     window.addEventListener("scroll", listener);
 
-    // Clean up the event listener when component unmounts
     return () => {
       window.removeEventListener("scroll", listener);
     };
-  }, [lastScrollTop]); // Re-run effect when lastScrollTop changes
+  }, [lastScrollTop]);
 
   return {
     scrollY,
     scrollX,
     scrollDirection,
+    atTop, // Return the atTop state
   };
 }

@@ -31,7 +31,7 @@ export const LandingHeader: React.FC = () => {
     }, 300);
   };
 
-  const { scrollY, scrollX, scrollDirection } = useScroll();
+  const { scrollY, scrollX, scrollDirection, atTop } = useScroll();
 
   type CSSProperties = {
     visibility: "visible" | "hidden" | "collapse";
@@ -56,7 +56,9 @@ export const LandingHeader: React.FC = () => {
 
   return (
     <div
-      style={scrollDirection === "down" ? styling.active : styling.hidden}
+      style={
+        atTop || scrollDirection === "down" ? styling.active : styling.hidden
+      }
       className={styles.headerContainer}
     >
       <div>
