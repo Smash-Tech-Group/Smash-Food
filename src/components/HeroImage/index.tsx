@@ -8,13 +8,12 @@ import styles from "./heroImage.module.css";
 export const Heroimage = () => {
   return (
     <div className={styles.heroContainer}>
-      <Image
+      <img
         src={herophone}
         alt="heroImage"
         className={styles.heroPhone}
         width={471}
         height={493}
-        unoptimized
       />
       <Image src={food} alt="food" className={styles.food} />
       <Image src={line} alt="line" className={styles.line} />
