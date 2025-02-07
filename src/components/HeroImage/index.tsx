@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import herophone from "../../../public/assets/herophone.svg";
+import herophone from "../../../public/assets/heroPhone.png";
 import food from "../../../public/assets/food.svg";
 import line from "../../../public/assets/line.svg";
 import styles from "./heroImage.module.css";
@@ -43,14 +43,12 @@ export const Heroimage = () => {
           quality={100}
         />
       )} */}
-      <Image
-        src={herophone}
+      <img
+        src={herophone.src}
         alt="heroImage"
         className={styles.heroPhone}
         width={471}
         height={493}
-        unoptimized={true}
-        quality={100}
       />
 
       <Image src={food} alt="food" className={styles.food} />
