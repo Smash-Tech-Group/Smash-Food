@@ -22,13 +22,6 @@ export const LandingHeader: React.FC = () => {
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
-
-    // Show the open hamburger icon temporarily for 500ms
-    setShowOpenHamburger(true);
-
-    // setTimeout(() => {
-    //   setShowOpenHamburger(false); // Hide after 500ms
-    // }, 300);
   };
 
   const { scrollY, scrollX, scrollDirection, atTop } = useScroll();
