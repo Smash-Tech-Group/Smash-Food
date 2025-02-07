@@ -41,8 +41,9 @@
 .footerBottom {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-top: 60px;
-  flex-wrap: wrap; /* Wrap content on smaller screens */
+  /* flex-wrap: wrap;  */
 }
 
 .copyright {
@@ -102,6 +103,11 @@
   background-color: rgb(125, 125, 125);
   margin-top: 32px;
   margin-bottom: 32px;
+}
+
+.terms {
+  display: flex;
+  gap: 24px;
 }
 
 /* For screens with max-width of 480px (Mobile) */
@@ -179,6 +185,11 @@
   .section ul {
     margin-top: 1px;
   }
+  .terms {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+  }
 }
 
 /* For screens between 481px and 768px (Tablets) */
@@ -209,7 +220,7 @@
   }
 
   .footerBottom {
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
     gap: 20px;
@@ -232,5 +243,9 @@
 
   .copyright {
     font-size: 18px;
+  }
+  .buttons {
+    display: flex;
+    justify-content: center;
   }
 }

@@ -97,7 +97,7 @@ export const Footer: React.FC = () => {
 
       <div className={styles.copyright}>
         <div>&copy; 2025 Smash Foods</div>
-        <div>
+        <div className={styles.terms}>
           <div>Terms & Conditions</div>
           <div>Privacy Policy</div>
           <div>Cookies Policy</div>
