@@ -46,6 +46,10 @@ export const LandingHeader: React.FC = () => {
       transform: "translateY(-100%)",
     },
   };
+  const scrollToFaq = (e: any) => {
+    e.preventDefault();
+    document.getElementById("faq")?.scrollIntoView({ behavior: "smooth" });
+  };
 
   return (
     <div
@@ -100,9 +104,9 @@ export const LandingHeader: React.FC = () => {
             </Link>
           </li>
           <li>
-            <Link href="/faq" className={styles.nav}>
+            <a href="#faq" onClick={scrollToFaq} className={styles.nav}>
               <span>FAQ's</span>
-              {isActive("/faq") ? (
+              {isActive("#faq") ? (
                 <Icon
                   icon="activeLine"
                   height={9}
@@ -110,14 +114,14 @@ export const LandingHeader: React.FC = () => {
                   className={styles.logo}
                 />
               ) : null}
-            </Link>
+            </a>
           </li>
         </ul>
       </div>
 
       <div className={styles.button}>
         <Link className={styles.getAppButton} href="">
-          Get Started
+          Store
         </Link>
       </div>
 
@@ -150,13 +154,13 @@ export const LandingHeader: React.FC = () => {
             </Link>
           </li>
           <li>
-            <Link href="/faq" className={styles.nav}>
+            <Link href="#faq" className={styles.nav}>
               FAQ's
             </Link>
           </li>
           <li>
             <Link className={styles.getAppButton} href="">
-              Get Started
+              Store
             </Link>
           </li>
         </ul>

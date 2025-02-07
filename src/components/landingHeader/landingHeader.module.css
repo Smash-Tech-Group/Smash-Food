@@ -39,7 +39,7 @@
 .getAppButton {
   color: white;
   background: var(--primary);
-  padding: 22px;
+  padding: 20px 32px;
   border-radius: 90px;
   text-decoration: none;
   position: relative;
@@ -69,7 +69,9 @@
 .logo {
   max-width: 100%;
 }
-
+.getAppButton:hover {
+  opacity: 0.6;
+}
 @media (max-width: 480px) {
   .buttons {
     flex-direction: column;

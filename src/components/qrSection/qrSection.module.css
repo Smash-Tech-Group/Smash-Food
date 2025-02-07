@@ -70,8 +70,12 @@
 .foodImage {
   width: 500px;
 }
+.illustration {
+  right: 5%;
+  top: 5%;
+  position: absolute;
+}
 
-/* Mobile-first styles (default for smaller devices) */
 @media (max-width: 480px) {
   .container {
     padding-bottom: 20px;
@@ -110,7 +114,7 @@
 
   .buttons {
     flex-direction: column; /* Stack buttons vertically on small screens */
-    gap: 15px;
+    gap: 20px;
     margin-top: 24px;
   }
 

@@ -8,6 +8,7 @@ import Link from "next/link";
 import qrCode from "../../../public/assets/qrCode.svg";
 import playStore from "../../../public/assets/playstore.svg";
 import blackApple from "../../../public/assets/blackApple.svg";
+import illustration from "../../../public/assets/ilustration.svg";
 
 export const QrSection = () => {
   // Using useMedia hook to detect the screen size
@@ -34,6 +35,9 @@ export const QrSection = () => {
               alt="foodSection"
               className={styles.foodImage}
             />
+          </div>
+          <div>
+            <Image src={illustration} alt="" className={styles.illustration} />
           </div>
           <div className={styles.text}>
             <span className={styles.title}>Satisfy Your Cravings</span>

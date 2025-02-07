@@ -45,7 +45,7 @@ const Faq = () => {
   };
 
   return (
-    <div className={styles.faqContainer}>
+    <div id="faq" className={styles.faqContainer}>
       <div className={styles.title}>Frequently Asked Questions</div>
       <div className={styles.cardContainer}>
         {contents.map((content, index) => {

@@ -17,20 +17,12 @@ export const Hero = () => {
 
   return (
     <div className={styles.heroContainer}>
-      <motion.div
-        initial={{ opacity: 0, y: 100 }}
-        animate={{
-          opacity: 1,
-          y: 0,
-          transition: { duration: 0.5 },
-        }}
-        className={styles.title}
-      >
+      <div className={styles.title}>
         <div>Savour Naija’s Flavours</div>
         <div>
           with <span className={styles.smash}>SmashFood</span>{" "}
         </div>
-      </motion.div>
+      </div>
       {/* <div className={styles.image}>
         <Image
           src={heroPhone}
@@ -46,17 +38,10 @@ export const Hero = () => {
           className={styles.icon}
         />
       </div> */}
-      <motion.div
-        initial={{ opacity: 0, y: 100 }}
-        animate={{
-          opacity: 1,
-          y: 0,
-          transition: { duration: 0.5 },
-        }}
-        className={styles.heroImage}
-      >
+      <div className={styles.heroImage}>
         <Heroimage />
-      </motion.div>
+      </div>
+      <div className={styles.blur}></div>
 
       <div className={styles.buttons}>
         <Link href="" className={styles.playstoreButton}>
@@ -80,7 +65,6 @@ export const Hero = () => {
           Download on App store
         </Link>
       </div>
-      <div className={styles.blur}></div>
     </div>
   );
 };
