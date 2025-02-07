@@ -2,9 +2,9 @@ import React, { useState, useEffect } from "react";
 import styles from "./createAccount.module.css";
 import Image from "next/image";
 import createImage from "../../../public/assets/createAccount.svg";
-import favourite from "../../../public/assets/favorites.svg"; // Assuming you have a 'favourite' image
-import allergies from "../../../public/assets/allergies.svg"; // Assuming you have an 'allergies' image
-import ordering from "../../../public/assets/ordering.svg"; // Assuming you have an 'ordering' image
+import favourite from "../../../public/assets/favorites.svg";
+import allergies from "../../../public/assets/allergies.png";
+import ordering from "../../../public/assets/ordering.svg";
 import account from "../../../public/assets/account.svg";
 import back from "../../../public/assets/back.svg";
 import forward from "../../../public/assets/forward.svg";
@@ -80,8 +80,8 @@ export const CreateAccount = () => {
   return (
     <div className={styles.container}>
       <div className={styles.imageContainer}>
-        <Image
-          src={slides[currentSlide].image}
+        <img
+          src={slides[currentSlide].image.src}
           alt="Slide Image"
           className={styles.account}
         />
