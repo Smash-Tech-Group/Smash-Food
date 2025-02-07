@@ -39,11 +39,15 @@
 .getAppButton {
   color: white;
   background: var(--primary);
-  padding: 20px 32px;
+  padding: 24px 36px;
   border-radius: 90px;
   text-decoration: none;
   position: relative;
   font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
 }
 
 .button {
