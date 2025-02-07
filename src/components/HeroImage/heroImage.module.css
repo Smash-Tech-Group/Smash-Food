@@ -12,7 +12,7 @@
   position: relative;
   z-index: 1;
 
-  /* max-width: 50%; */
+  max-width: 50%;
 
   max-width: 100%;
   height: auto;
@@ -36,9 +36,9 @@
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
-  /* .heroPhone {
+  .heroPhone {
     max-width: 45%;
-  } */
+  }
 
   .food {
     position: absolute;
@@ -57,9 +57,9 @@
 }
 
 @media (min-width: 481px) and (max-width: 768px) {
-  /* .heroPhone {
+  .heroPhone {
     max-width: 45%;
-  } */
+  }
 
   .food {
     left: 16%;
@@ -75,9 +75,9 @@
 }
 
 @media (max-width: 480px) {
-  /* .heroPhone {
+  .heroPhone {
     max-width: 55%;
-  } */
+  }
   .food {
     left: 12%;
     bottom: 30%;

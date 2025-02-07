@@ -13,7 +13,7 @@ export const Heroimage = () => {
 
   return (
     <div className={styles.heroContainer}>
-      {isMobile ? (
+      {/* {isMobile ? (
         <Image
           src={herophone}
           alt="heroImage"
@@ -42,7 +42,16 @@ export const Heroimage = () => {
           unoptimized={true}
           quality={100}
         />
-      )}
+      )} */}
+      <Image
+        src={herophone}
+        alt="heroImage"
+        className={styles.heroPhone}
+        width={471}
+        height={493}
+        unoptimized={true}
+        quality={100}
+      />
 
       <Image src={food} alt="food" className={styles.food} />
       <Image src={line} alt="line" className={styles.line} />
