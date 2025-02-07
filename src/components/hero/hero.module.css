@@ -111,8 +111,7 @@
     width: 90%; /* Scale image smaller */
   }
   .blur {
-    bottom: 205px;
-    height: 30px;
+    display: none;
   }
 }
 
