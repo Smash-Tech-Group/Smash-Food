@@ -17,9 +17,8 @@ export const Heroimage = () => {
         <Image
           src={herophone}
           alt="heroImage"
-          className={styles.heroPhone}
-          width={259.05}
-          height={271.15}
+          width={180}
+          height={197.2}
           unoptimized={true}
           quality={100}
         />
