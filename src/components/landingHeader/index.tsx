@@ -48,7 +48,18 @@ export const LandingHeader: React.FC = () => {
   };
   const scrollToFaq = (e: any) => {
     e.preventDefault();
-    document.getElementById("faq")?.scrollIntoView({ behavior: "smooth" });
+
+    if (pathname !== "/") {
+      router.push("/").then(() => {
+        setTimeout(() => {
+          document
+            .getElementById("faq")
+            ?.scrollIntoView({ behavior: "smooth" });
+        }, 500); // Delay to ensure the page has loaded
+      });
+    } else {
+      document.getElementById("faq")?.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   return (
