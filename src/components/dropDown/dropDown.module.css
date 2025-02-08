@@ -1,36 +1,11 @@
-/* .container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: var(--primary);
-  color: white;
-  padding: 24px;
-  z-index: 1000;
-  overflow: hidden;
-
-  opacity: 0;
-  transform: translateY(-100%);
-  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-  pointer-events: none;
-}
-
-.open {
-  opacity: 1;
-  transform: translateY(0);
-  pointer-events: all;
-} */
-
 .container {
   position: fixed;
-  top: 16px; /* Match burger's position */
-  right: 24px; /* Match burger's position */
-  width: 32px; /* Start as small as the burger */
+  top: 16px;
+  right: 24px;
   height: 32px;
   background-color: var(--primary);
   color: white;
-  border-radius: 50%; /* Start as a small circle */
+  border-radius: 50%;
   z-index: 1000;
   overflow: hidden;
   opacity: 0;
@@ -47,17 +22,15 @@
 
 .open {
   opacity: 1;
-  width: 100vw; /* Expand to full width */
-  height: 100vh; /* Expand to full height */
-  top: 0; /* Cover the top */
-  right: 0; /* Cover the right */
-  border-radius: 0; /* Transform into a full rectangle */
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  right: 0;
+  border-radius: 0;
 
   pointer-events: all;
 }
-/* .hamburger {
-  margin-top: -14px;
-} */
+
 .hamburgerInside {
   position: absolute;
   top: 45px;
@@ -111,7 +84,7 @@
   font-weight: 500;
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   cursor: pointer;
 }
 

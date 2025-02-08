@@ -9,6 +9,7 @@ import qrCode from "../../../public/assets/qrCode.svg";
 import playStore from "../../../public/assets/playstore.svg";
 import blackApple from "../../../public/assets/blackApple.svg";
 import illustration from "../../../public/assets/ilustration.svg";
+import { motion } from "framer-motion";
 
 export const QrSection = () => {
   // Using useMedia hook to detect the screen size
@@ -26,7 +27,13 @@ export const QrSection = () => {
     imageSrc = foodSection;
   }
   return (
-    <div className={styles.container}>
+    <motion.div
+      initial={{ y: 100, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      exit={{ y: 100, opacity: 0 }}
+      transition={{ duration: 0.7, ease: "easeOut" }}
+      className={styles.container}
+    >
       {isDesktop ? (
         <>
           <div>
@@ -127,6 +134,6 @@ export const QrSection = () => {
           </div>
         </div>
       )}
-    </div>
+    </motion.div>
   );
 };
