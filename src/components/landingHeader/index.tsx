@@ -15,6 +15,7 @@ import cart from "../../../public/assets/cart.svg";
 import wigly from "../../../public/assets/wigly.svg";
 
 export const LandingHeader: React.FC = () => {
+  const [openHamburger, setOpenHamburger] = useState(false);
   const router = useRouter();
   const { pathname } = router;
 
@@ -127,6 +128,27 @@ export const LandingHeader: React.FC = () => {
           <Image src={cart} alt="cart" height={24} width={24} />
           Store
         </Link>
+      </div>
+      <div className={styles.hamburgerMenu}>
+        {openHamburger ? (
+          <Image
+            src={openhamburger}
+            alt="menu"
+            width={40}
+            onClick={() => {
+              setOpenHamburger((prev) => !prev);
+            }}
+          />
+        ) : (
+          <Image
+            src={hamburger}
+            alt="menu"
+            width={32}
+            onClick={() => {
+              setOpenHamburger((prev) => !prev);
+            }}
+          />
+        )}
       </div>
     </div>
   );

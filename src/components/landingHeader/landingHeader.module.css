@@ -79,6 +79,7 @@
 .wigly {
   position: absolute;
 }
+
 @media (max-width: 480px) {
   .buttons {
     flex-direction: column;
@@ -190,5 +191,8 @@
   .headerContainer {
     padding-left: 300px;
     padding-right: 300px;
+  }
+  .hamburgerMenu {
+    display: none;
   }
 }
