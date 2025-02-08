@@ -17,10 +17,10 @@ export const Hero = () => {
 
   return (
     <motion.div
-      initial={{ y: 100, opacity: 0 }} // Start position (100px below)
-      animate={{ y: 0, opacity: 1 }} // End position (normal)
-      exit={{ y: 100, opacity: 0 }} // Exit animation (moves down)
-      transition={{ duration: 0.5, ease: "easeOut" }}
+      initial={{ y: 100, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      exit={{ y: 100, opacity: 0 }}
+      transition={{ duration: 0.7, ease: "easeOut" }}
       className={styles.heroContainer}
     >
       <div className={styles.title}>
