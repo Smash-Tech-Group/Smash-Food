@@ -79,6 +79,12 @@
 .wigly {
   position: absolute;
 }
+.burger {
+  display: none;
+}
+.hamburgerMenu {
+  display: none;
+}
 
 @media (max-width: 480px) {
   .buttons {
@@ -112,6 +118,12 @@
   .footerBottom {
     margin-top: 20px;
   }
+  .dropdownMenu {
+    display: none;
+  }
+  .burger {
+    display: block;
+  }
   @keyframes moveBurgerAnimation {
     0% {
       transform: translateY(0);
@@ -140,6 +152,7 @@
   }
 
   .burger {
+    display: block;
     transition: transform 0.4s ease-in-out, opacity 0.3s ease-in-out;
   }
 
@@ -163,28 +176,6 @@
   .logo {
     width: 180px;
     height: 50%;
-  }
-
-  .dropdownMenu {
-    position: absolute;
-    top: 200px;
-    left: 0;
-    right: 0;
-    background: black;
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    gap: 20px;
-  }
-
-  .dropdownMenu ul {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .dropdownMenu li {
-    list-style: none;
   }
 }
 @media (min-width: 1890px) {

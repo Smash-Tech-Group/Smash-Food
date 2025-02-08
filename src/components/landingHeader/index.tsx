@@ -148,21 +148,20 @@ export const LandingHeader: React.FC = () => {
           Store
         </Link>
       </div>
-      <div>
-        <Image
-          key={Number(openHamburger)}
-          src={hamburger}
-          alt="menu"
-          width={32}
-          onClick={() => {
-            setOpenHamburger((prev) => !prev);
-            toggleDropdown();
-          }}
-          className={`${styles.burger} ${
-            openHamburger ? styles.moveBurger : styles.showBurger
-          }`}
-        />
-      </div>
+
+      <Image
+        key={Number(openHamburger)}
+        src={hamburger}
+        alt="menu"
+        width={32}
+        onClick={() => {
+          setOpenHamburger((prev) => !prev);
+          toggleDropdown();
+        }}
+        className={`${styles.burger} ${
+          openHamburger ? styles.moveBurger : styles.showBurger
+        }`}
+      />
     </div>
   );
 };
