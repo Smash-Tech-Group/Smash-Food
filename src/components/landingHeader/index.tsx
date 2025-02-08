@@ -17,14 +17,8 @@ import wigly from "../../../public/assets/wigly.svg";
 export const LandingHeader: React.FC = () => {
   const router = useRouter();
   const { pathname } = router;
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [showOpenHamburger, setShowOpenHamburger] = useState(false);
 
   const isActive = (linkPath: string) => pathname === linkPath;
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
 
   const { scrollY, scrollX, scrollDirection, atTop } = useScroll();
 
@@ -133,47 +127,6 @@ export const LandingHeader: React.FC = () => {
           <Image src={cart} alt="cart" height={24} width={24} />
           Store
         </Link>
-      </div>
-
-      <div
-        className={`${styles.hamburgerMenu} ${isMenuOpen ? styles.open : ""}`}
-        onClick={toggleMenu}
-      >
-        {isMenuOpen ? (
-          <Image src={openhamburger} alt="open" width={42} />
-        ) : (
-          <Image src={hamburger} alt="close" width={32} />
-        )}
-      </div>
-
-      <div className={`${styles.dropdownMenu} ${isMenuOpen ? "open" : ""}`}>
-        <ul>
-          <li>
-            <Link href="/" className={styles.nav}>
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link href="/about" className={styles.nav}>
-              About Us
-            </Link>
-          </li>
-          <li>
-            <Link href="/contact" className={styles.nav}>
-              Contact Us
-            </Link>
-          </li>
-          <li>
-            <Link href="#faq" className={styles.nav}>
-              FAQ's
-            </Link>
-          </li>
-          <li>
-            <Link className={styles.getAppButton} href="">
-              Store
-            </Link>
-          </li>
-        </ul>
       </div>
     </div>
   );

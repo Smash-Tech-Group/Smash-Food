@@ -91,11 +91,13 @@
 
 @media (max-width: 480px) {
   .heroContainer {
-    margin-top: 60px;
+    margin-top: 80px;
     padding: 0px;
   }
   .title {
     font-size: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
   }
 
   .buttons {
