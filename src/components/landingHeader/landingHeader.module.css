@@ -126,7 +126,7 @@
   }
 
   .moveBurger {
-    animation: moveBurgerAnimation 1s ease-in-out forwards;
+    animation: moveBurgerAnimation 1s ease-in-out alternate;
   }
 }
 

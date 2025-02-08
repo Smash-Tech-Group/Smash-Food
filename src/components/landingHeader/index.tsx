@@ -18,6 +18,7 @@ import { useDropdown } from "src/context/dropdownContext";
 
 export const LandingHeader: React.FC = () => {
   const [openHamburger, setOpenHamburger] = useState(false);
+  const [isHidden, setIsHidden] = useState(false);
   const { toggleDropdown, closeDropdown } = useDropdown();
   const router = useRouter();
   const { pathname } = router;
@@ -29,7 +30,7 @@ export const LandingHeader: React.FC = () => {
   type CSSProperties = {
     visibility: "visible" | "hidden" | "collapse";
     transition: string;
-    transform?: string; // transform is optional
+    transform?: string;
   };
 
   const styling: {
@@ -60,6 +61,10 @@ export const LandingHeader: React.FC = () => {
     } else {
       document.getElementById("faq")?.scrollIntoView({ behavior: "smooth" });
     }
+  };
+  const handleClick = () => {
+    setIsHidden(false);
+    setTimeout(() => setIsHidden(true), 10);
   };
 
   return (
@@ -145,6 +150,7 @@ export const LandingHeader: React.FC = () => {
       </div>
       <div>
         <Image
+          key={Number(openHamburger)}
           src={hamburger}
           alt="menu"
           width={32}
