@@ -10,7 +10,7 @@ import Image from "next/image";
 import { Button } from "@components";
 import { useMedia } from "react-use";
 import { useScroll } from "../../hooks/useScroll";
-import logo from "../../../public/assets/logo.svg";
+import logo from "../../../public/assets/logo.png";
 import cart from "../../../public/assets/cart.svg";
 import wigly from "../../../public/assets/wigly.svg";
 
@@ -56,7 +56,7 @@ export const LandingHeader: React.FC = () => {
       className={styles.headerContainer}
     >
       <div>
-        <Image src={logo} alt="logo" className={styles.logo} />
+        <img src={logo.src} alt="logo" className={styles.logo} />
       </div>
 
       <div className={styles.navLinks}>

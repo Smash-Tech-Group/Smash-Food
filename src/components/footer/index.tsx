@@ -7,7 +7,7 @@ import { Icon } from "@components/icon"; // Assuming you use this icon component
 import spiral from "../../../public/assets/spiral.svg";
 import ellipse from "../../../public/assets/ellipse.svg";
 import str from "../../../public/assets/str.svg";
-import logo from "../../../public/assets/logo.svg";
+import logo from "../../../public/assets/logo.png";
 import twitter from "../../../public/assets/twitter.svg";
 import instagram from "../../../public/assets/instagram.svg";
 import tiktok from "../../../public/assets/tiktok.svg";
@@ -24,7 +24,7 @@ export const Footer: React.FC = () => {
     <div className={styles.footerContainer}>
       <div className={styles.footerSections}>
         <section>
-          <Image src={logo} alt="logo" className={styles.logo} />
+          <img src={logo.src} alt="logo" className={styles.logo} />
         </section>
         <section className={styles.section}>
           <span className={styles.heading}>
