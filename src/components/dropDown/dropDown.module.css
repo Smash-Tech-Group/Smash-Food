@@ -1,4 +1,4 @@
-.container {
+/* .container {
   position: fixed;
   top: 0;
   left: 0;
@@ -20,6 +20,56 @@
   opacity: 1;
   transform: translateY(0);
   pointer-events: all;
+} */
+
+.container {
+  position: fixed;
+  top: 16px; /* Match burger's position */
+  right: 24px; /* Match burger's position */
+  width: 32px; /* Start as small as the burger */
+  height: 32px;
+  background-color: var(--primary);
+  color: white;
+  border-radius: 50%; /* Start as a small circle */
+  z-index: 1000;
+  overflow: hidden;
+  opacity: 0;
+
+  transform-origin: top right; /* Expand from the burger */
+  transition: width 0.2s ease-in-out, height 0.2s ease-in-out,
+    top 0.3s ease-in-out, right 0.3s ease-in-out, border-radius 0.3s ease-in-out,
+    opacity 0.3s ease-in-out;
+
+  pointer-events: none;
+  padding: 24px;
+  padding-top: 60px;
+}
+
+.open {
+  opacity: 1;
+  width: 100vw; /* Expand to full width */
+  height: 100vh; /* Expand to full height */
+  top: 0; /* Cover the top */
+  right: 0; /* Cover the right */
+  border-radius: 0; /* Transform into a full rectangle */
+
+  pointer-events: all;
+}
+/* .hamburger {
+  margin-top: -14px;
+} */
+.hamburgerInside {
+  position: absolute;
+  top: 45px;
+  right: 60px;
+  opacity: 0;
+  transform: translateY(-50px);
+  transition: transform 0.4s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.showBurger {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .getAppButton {
@@ -34,6 +84,9 @@
   justify-content: center;
   align-items: center;
   gap: 3px;
+  margin-right: 90px;
+
+  margin-top: -8px;
 }
 
 .buttons {
@@ -65,4 +118,19 @@
 .icon {
   margin-right: 10px;
   margin-top: 15px;
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding-top: 40px;
+  }
+  .hamburgerInside {
+    right: 7%;
+    top: 3%;
+  }
+  .getAppButton {
+    margin-right: 60px;
+
+    margin-top: -10px;
+  }
 }

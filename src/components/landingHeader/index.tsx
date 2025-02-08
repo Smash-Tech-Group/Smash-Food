@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./landingHeader.module.css";
 import { Icon } from "@components/icon";
 import Link from "next/link";
@@ -18,7 +18,7 @@ import { useDropdown } from "src/context/dropdownContext";
 
 export const LandingHeader: React.FC = () => {
   const [openHamburger, setOpenHamburger] = useState(false);
-  const { toggleDropdown } = useDropdown();
+  const { toggleDropdown, closeDropdown } = useDropdown();
   const router = useRouter();
   const { pathname } = router;
 
@@ -143,7 +143,7 @@ export const LandingHeader: React.FC = () => {
           Store
         </Link>
       </div>
-      <div className={styles.hamburgerMenu}>
+      <div>
         <Image
           src={hamburger}
           alt="menu"
@@ -152,6 +152,9 @@ export const LandingHeader: React.FC = () => {
             setOpenHamburger((prev) => !prev);
             toggleDropdown();
           }}
+          className={`${styles.burger} ${
+            openHamburger ? styles.moveBurger : styles.showBurger
+          }`}
         />
       </div>
     </div>

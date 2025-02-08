@@ -11,6 +11,7 @@ import rectangle from "../../../public/assets/rectangle.svg";
 import circle from "../../../public/assets/circle.svg";
 import triangle from "../../../public/assets/triangle.svg";
 import pinkstar from "../../../public/assets/pinkstar.svg";
+import openhamburger from "../../../public/assets/openhamburger.svg";
 import str from "../../../public/assets/str.svg";
 import { useDropdown } from "src/context/dropdownContext";
 
@@ -63,13 +64,19 @@ export const DropDown = () => {
             <Image src={greenCart} alt="cart" height={24} width={24} />
             Store
           </Link>
-          <Image
-            src={whiteCancel}
-            alt="cart"
-            height={24}
-            width={24}
-            onClick={closeDropdown}
-          />
+          <div
+            className={`${styles.hamburgerInside} ${
+              isOpen ? styles.showBurger : styles.hideBurger
+            }`}
+          >
+            <Image
+              src={openhamburger}
+              alt="cart"
+              width={40}
+              onClick={closeDropdown}
+              className={styles.hamburger}
+            />
+          </div>
         </div>
       </div>
       <div className={styles.menu}>
