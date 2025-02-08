@@ -5,7 +5,7 @@ import type { NextPage } from "next";
 import { Poppins } from "next/font/google";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { Breakpoint, BreakpointProvider } from "react-socks";
+import { DropdownProvider } from "src/context/dropdownContext";
 
 export type NextPageWithLayout<P = unknown, IP = P> = NextPage<P, IP> & {
   getLayout?: (page: ReactElement) => ReactNode;
@@ -15,6 +15,7 @@ type AppPropsWithLayout = AppProps & {
   Component: NextPageWithLayout;
   pageProps: Record<string, unknown>;
 };
+
 const poppins = Poppins({
   weight: ["300", "400", "500", "700"],
   style: ["normal"],
@@ -22,11 +23,13 @@ const poppins = Poppins({
 });
 
 export default function App({ Component, pageProps }: AppPropsWithLayout) {
-  const getLayout = Component.getLayout ?? ((page: ReactElement) => page);
+  const getLayout = Component.getLayout ?? ((page) => page);
 
-  return getLayout(
-    <main className={poppins.className}>
-      <Component {...pageProps} />
-    </main>
+  return (
+    <DropdownProvider>
+      <main className={poppins.className}>
+        {getLayout(<Component {...pageProps} />)}
+      </main>
+    </DropdownProvider>
   );
 }

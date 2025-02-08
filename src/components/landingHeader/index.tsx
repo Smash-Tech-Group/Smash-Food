@@ -13,9 +13,12 @@ import { useScroll } from "../../hooks/useScroll";
 import logo from "../../../public/assets/logo.png";
 import cart from "../../../public/assets/cart.svg";
 import wigly from "../../../public/assets/wigly.svg";
+import { DropDown } from "@components/dropDown";
+import { useDropdown } from "src/context/dropdownContext";
 
 export const LandingHeader: React.FC = () => {
   const [openHamburger, setOpenHamburger] = useState(false);
+  const { toggleDropdown } = useDropdown();
   const router = useRouter();
   const { pathname } = router;
 
@@ -130,25 +133,15 @@ export const LandingHeader: React.FC = () => {
         </Link>
       </div>
       <div className={styles.hamburgerMenu}>
-        {openHamburger ? (
-          <Image
-            src={openhamburger}
-            alt="menu"
-            width={40}
-            onClick={() => {
-              setOpenHamburger((prev) => !prev);
-            }}
-          />
-        ) : (
-          <Image
-            src={hamburger}
-            alt="menu"
-            width={32}
-            onClick={() => {
-              setOpenHamburger((prev) => !prev);
-            }}
-          />
-        )}
+        <Image
+          src={hamburger}
+          alt="menu"
+          width={32}
+          onClick={() => {
+            setOpenHamburger((prev) => !prev);
+            toggleDropdown();
+          }}
+        />
       </div>
     </div>
   );

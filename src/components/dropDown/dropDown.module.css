@@ -1,0 +1,68 @@
+.container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--primary);
+  color: white;
+  padding: 24px;
+  z-index: 1000;
+  overflow: hidden;
+
+  opacity: 0;
+  transform: translateY(-100%);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  pointer-events: none;
+}
+
+.open {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: all;
+}
+
+.getAppButton {
+  color: var(--primary);
+  background: rgba(255, 255, 255, 1);
+  padding: 12px 24px;
+  border-radius: 90px;
+  text-decoration: none;
+  position: relative;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 16px;
+}
+
+.getAppButton:hover {
+  background: rgba(243, 116, 37, 1);
+}
+.wigly {
+  position: absolute;
+  display: none;
+}
+
+.links {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 1);
+  font-size: 24px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.icon {
+  margin-right: 10px;
+  margin-top: 15px;
+}

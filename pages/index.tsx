@@ -9,6 +9,7 @@ import Slider from "@components/slider";
 import { CreateAccount } from "@components/createAccount";
 import CustomSlider from "@components/slider";
 import Faq from "@components/faq";
+import { DropDown } from "@components/dropDown";
 
 const Home = () => {
   const [name, setName] = useState("hafsat");
