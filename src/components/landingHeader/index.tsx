@@ -55,7 +55,7 @@ export const LandingHeader: React.FC = () => {
           document
             .getElementById("faq")
             ?.scrollIntoView({ behavior: "smooth" });
-        }, 500); // Delay to ensure the page has loaded
+        }, 500);
       });
     } else {
       document.getElementById("faq")?.scrollIntoView({ behavior: "smooth" });
