@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import styles from "./createAccount.module.css";
 import Image from "next/image";
-import createImage from "../../../public/assets/createAccount.svg";
-import favourite from "../../../public/assets/favorites.svg";
+import createImage from "../../../public/assets/createAccount.png";
+import favourite from "../../../public/assets/favorites.png";
 import allergies from "../../../public/assets/allergies.png";
-import ordering from "../../../public/assets/ordering.svg";
+import ordering from "../../../public/assets/order.png";
 import account from "../../../public/assets/account.svg";
 import back from "../../../public/assets/back.svg";
 import forward from "../../../public/assets/forward.svg";
