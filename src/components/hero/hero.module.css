@@ -41,11 +41,13 @@
 }
 
 .blur {
-  width: 100%;
+  width: 80%;
   height: 60px;
   background: rgba(255, 255, 255, 1);
-  filter: blur(24px);
+
+  filter: blur(27px);
   position: absolute;
+  right: 10%;
   bottom: 170px;
   z-index: 20;
 }
@@ -76,7 +78,7 @@
 }
 
 .playstoreButton:hover {
-  opacity: 0.8;
+  background-color: rgba(243, 116, 37, 1);
 }
 
 .playstoreIcon {
@@ -90,6 +92,7 @@
 @media (max-width: 480px) {
   .heroContainer {
     margin-top: 60px;
+    padding: 0px;
   }
   .title {
     font-size: 30px;
@@ -111,7 +114,11 @@
     width: 90%; /* Scale image smaller */
   }
   .blur {
-    display: none;
+    height: 30px;
+    bottom: 170px;
+
+    filter: blur(10px);
+    text-align: center;
   }
 }
 
@@ -133,6 +140,7 @@
   .heroPhone {
     width: 85%; /* Scale image to fit tablet */
   }
+  .blur {
+    bottom: 150px;
+  }
 }
-
-/* Larger Tablets / Small Desktops */

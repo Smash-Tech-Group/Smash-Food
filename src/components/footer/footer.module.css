@@ -12,7 +12,7 @@
 .footerSections {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap; /* Add wrap to allow sections to stack on smaller screens */
+  flex-wrap: wrap;
 }
 
 .section {
@@ -25,10 +25,11 @@
 }
 
 .heading {
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 500;
   display: flex;
   align-items: center;
+  min-width: 290px;
 }
 
 .section li {
@@ -75,6 +76,9 @@
   justify-content: center;
   align-items: center;
   font-size: 16px;
+}
+.playstoreButton:hover {
+  background-color: rgba(243, 116, 37, 1);
 }
 
 .playstoreIcon {
@@ -247,5 +251,69 @@
   .buttons {
     display: flex;
     justify-content: center;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .footerContainer {
+    padding: 32px; /* Slightly reduced padding for medium screens */
+  }
+
+  .footerSections {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .section {
+    width: 48%; /* Slightly larger sections for medium screens */
+    margin-bottom: 20px;
+  }
+
+  .heading {
+    font-size: 18px; /* Slightly smaller text for medium screens */
+    margin-bottom: 12px;
+  }
+
+  .section li {
+    font-size: 18px; /* Slightly smaller font size for medium screens */
+    margin-bottom: 8px;
+  }
+
+  .footerBottom {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .icons {
+    width: auto;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  .icn {
+    margin-right: 10px;
+  }
+
+  .playstoreButton {
+    padding: 20px;
+    font-size: 14px;
+  }
+
+  .copyright {
+    font-size: 18px;
+  }
+  .buttons {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 1890px) {
+  .footerContainer {
+    padding-left: 200px;
+    padding-right: 200px;
   }
 }

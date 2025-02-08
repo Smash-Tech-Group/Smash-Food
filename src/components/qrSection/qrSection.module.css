@@ -163,20 +163,55 @@
   }
 }
 
-/* Medium-sized devices (up to 1024px) */
 @media (min-width: 769px) and (max-width: 1024px) {
   .title {
-    font-size: 6vw; /* Make it slightly larger again for tablets */
+    font-size: 50px; /* Reduce font size for medium-sized devices */
+    margin-bottom: 5px;
   }
-  .foodImage {
-    width: 400px;
+  /* .subTitle {
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 70px;
+  } */
+
+  .food {
+    height: 180px;
   }
   .firstRow {
     display: flex;
-    margin-bottom: 5px;
+    margin-bottom: 50px;
+  }
+  .container {
+    padding: 32px;
+  }
+  .code {
+    text-align: center;
+  }
+  .buttons {
+    gap: 25px; /* Medium gap between buttons */
+  }
+
+  .playstoreButton {
+    font-size: 14px;
+    padding: 18px 24px;
   }
 }
 
-/* Large screens (1280px and up) */
-@media screen and (min-width: 1280px) {
+@media (min-width: 1890px) {
+  .container {
+    padding-left: 300px;
+    padding-right: 700px;
+  }
+  .title {
+    margin-right: 300px;
+  }
+  .qrCode {
+    margin-right: 300px;
+  }
+  .illustration {
+    margin-right: 300px;
+  }
+  .buttons {
+    padding-right: 300px;
+  }
 }

@@ -74,7 +74,10 @@
   max-width: 100%;
 }
 .getAppButton:hover {
-  opacity: 0.6;
+  background: rgba(243, 116, 37, 1);
+}
+.wigly {
+  position: absolute;
 }
 @media (max-width: 480px) {
   .buttons {
@@ -143,7 +146,7 @@
   }
 }
 
-@media (min-width: 481px) and (max-width: 768px) {
+@media (min-width: 481px) and (max-width: 1024px) {
   .navLinks {
     display: none;
   }
@@ -181,5 +184,11 @@
 
   .dropdownMenu li {
     list-style: none;
+  }
+}
+@media (min-width: 1890px) {
+  .headerContainer {
+    padding-left: 300px;
+    padding-right: 300px;
   }
 }

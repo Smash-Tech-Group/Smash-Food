@@ -13,8 +13,8 @@ import illustration from "../../../public/assets/ilustration.svg";
 export const QrSection = () => {
   // Using useMedia hook to detect the screen size
   const isMobile = useMedia("(max-width: 480px)");
-  const isTablet = useMedia("(min-width: 481px) and (max-width: 768px)");
-  const isDesktop = useMedia("(min-width: 769px)");
+  const isTablet = useMedia("(min-width: 481px) and (max-width: 1024px)");
+  const isDesktop = useMedia("(min-width: 1025px)");
 
   // Conditionally set the image source based on screen size
   let imageSrc;

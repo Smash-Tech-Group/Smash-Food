@@ -12,6 +12,7 @@ import { useMedia } from "react-use";
 import { useScroll } from "../../hooks/useScroll";
 import logo from "../../../public/assets/logo.svg";
 import cart from "../../../public/assets/cart.svg";
+import wigly from "../../../public/assets/wigly.svg";
 
 export const LandingHeader: React.FC = () => {
   const router = useRouter();
@@ -122,6 +123,13 @@ export const LandingHeader: React.FC = () => {
 
       <div className={styles.button}>
         <Link className={styles.getAppButton} href="">
+          <Image
+            src={wigly}
+            alt=""
+            height={46.63}
+            width={94.36}
+            className={styles.wigly}
+          />
           <Image src={cart} alt="cart" height={24} width={24} />
           Store
         </Link>
