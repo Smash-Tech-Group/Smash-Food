@@ -16,7 +16,13 @@ export const Hero = () => {
   const isMobile = useMedia("(max-width: 558px)");
 
   return (
-    <div className={styles.heroContainer}>
+    <motion.div
+      initial={{ y: 100, opacity: 0 }} // Start position (100px below)
+      animate={{ y: 0, opacity: 1 }} // End position (normal)
+      exit={{ y: 100, opacity: 0 }} // Exit animation (moves down)
+      transition={{ duration: 0.5, ease: "easeOut" }}
+      className={styles.heroContainer}
+    >
       <div className={styles.title}>
         <div>Savour Naija’s Flavours</div>
         <div>
@@ -65,6 +71,6 @@ export const Hero = () => {
           Download on App store
         </Link>
       </div>
-    </div>
+    </motion.div>
   );
 };
