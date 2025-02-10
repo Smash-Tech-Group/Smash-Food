@@ -62,10 +62,6 @@ export const LandingHeader: React.FC = () => {
       document.getElementById("faq")?.scrollIntoView({ behavior: "smooth" });
     }
   };
-  const handleClick = () => {
-    setIsHidden(false);
-    setTimeout(() => setIsHidden(true), 10);
-  };
 
   return (
     <div

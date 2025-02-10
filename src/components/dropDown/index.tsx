@@ -50,44 +50,45 @@ export const DropDown = () => {
 
   return (
     <div className={`${styles.container} ${isOpen ? styles.open : ""}`}>
-      <div></div>
-      <div>
-        <div className={styles.buttons}>
-          <Link className={styles.getAppButton} href="">
-            <Image
-              src={wigly}
-              alt=""
-              height={46.63}
-              width={94.36}
-              className={styles.wigly}
-            />
-            <Image src={greenCart} alt="cart" height={24} width={24} />
-            Store
-          </Link>
-          <div
-            className={`${styles.hamburgerInside} ${
-              isOpen ? styles.showBurger : styles.hideBurger
-            }`}
-          >
-            <Image
-              src={openhamburger}
-              alt="cart"
-              width={40}
-              onClick={closeDropdown}
-              className={styles.hamburger}
-            />
-          </div>
+      <div className={styles.buttons}>
+        <Link className={styles.getAppButton} href="">
+          <Image
+            src={wigly}
+            alt=""
+            height={46.63}
+            width={94.36}
+            className={styles.wigly}
+          />
+          <Image src={greenCart} alt="cart" height={24} width={24} />
+          Store
+        </Link>
+        <div
+          className={`${styles.hamburgerInside} ${
+            isOpen ? styles.showBurger : styles.hideBurger
+          }`}
+        >
+          <Image
+            src={openhamburger}
+            alt="cart"
+            width={40}
+            onClick={closeDropdown}
+            className={styles.hamburger}
+          />
         </div>
       </div>
-      <div className={styles.menu}>
+
+      <div className={styles.menus}>
         {menus.map((menu) => {
           return (
-            <Link href="" className={styles.links}>
-              <div>
-                <Image src={menu.icon} alt="" className={styles.icon} />
-                <span>{menu.title}</span>
-              </div>
-            </Link>
+            <div className={styles.menu}>
+              <Link href="" className={styles.links}>
+                <div>
+                  <Image src={menu.icon} alt="" className={styles.icon} />
+                  <span>{menu.title}</span>
+                </div>
+              </Link>
+              <div className={styles.line}></div>
+            </div>
           );
         })}
       </div>

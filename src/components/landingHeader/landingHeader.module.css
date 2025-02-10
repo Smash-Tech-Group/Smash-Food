@@ -123,18 +123,7 @@
   }
   .burger {
     display: block;
-  }
-  @keyframes moveBurgerAnimation {
-    0% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(60px);
-    }
-
-    100% {
-      transform: translateY(0);
-    }
+    margin-bottom: 4px;
   }
 
   .moveBurger {
@@ -154,23 +143,6 @@
   .burger {
     display: block;
     transition: transform 0.4s ease-in-out, opacity 0.3s ease-in-out;
-  }
-
-  @keyframes moveBurgerAnimation {
-    0% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(60px);
-    }
-
-    100% {
-      transform: translateY(0);
-    }
-  }
-
-  .moveBurger {
-    animation: moveBurgerAnimation 1s ease-in-out forwards;
   }
 
   .logo {

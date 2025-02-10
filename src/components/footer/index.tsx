@@ -28,7 +28,7 @@ export const Footer: React.FC = () => {
         </section>
         <section className={styles.section}>
           <span className={styles.heading}>
-            <Image src={spiral} alt="spiral" className={styles.icon} />
+            {/* <Image src={spiral} alt="spiral" className={styles.icon} /> */}
             Smashfood
           </span>
           <ul>
@@ -39,7 +39,7 @@ export const Footer: React.FC = () => {
         </section>
         <section className={styles.section}>
           <span className={styles.heading}>
-            <Image src={ellipse} alt="ellipse" className={styles.icon} />
+            {/* <Image src={ellipse} alt="ellipse" className={styles.icon} /> */}
             Partner With Smashfood
           </span>
           <ul>
@@ -50,7 +50,7 @@ export const Footer: React.FC = () => {
         </section>
         <section className={`${styles.section} ${styles.companySection}`}>
           <span className={styles.heading}>
-            <Image src={str} alt="str" className={styles.icon} />
+            {/* <Image src={str} alt="str" className={styles.icon} /> */}
             Company
           </span>
           <ul>
