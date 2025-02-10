@@ -17,5 +17,6 @@ body {
   --primary: rgba(0, 71, 43, 1);
   --primarylight: rgba(0, 71, 43, 0.2);
   --secondary: rgba(243, 116, 37, 1);
+
   --regular: rgba(59, 59, 59, 1);
 }

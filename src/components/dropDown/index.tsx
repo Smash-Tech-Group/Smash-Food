@@ -82,12 +82,12 @@ export const DropDown = () => {
           return (
             <div className={styles.menu}>
               <Link href="" className={styles.links}>
-                <div>
+                <div className={styles.texts}>
                   <Image src={menu.icon} alt="" className={styles.icon} />
-                  <span>{menu.title}</span>
+                  <span className={styles.title}>{menu.title}</span>
                 </div>
+                <div className={styles.line}></div>
               </Link>
-              <div className={styles.line}></div>
             </div>
           );
         })}
