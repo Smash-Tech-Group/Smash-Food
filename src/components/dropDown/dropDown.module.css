@@ -93,11 +93,11 @@
   margin-bottom: -5px;
 }
 .line {
-  height: 0.05px;
+  height: 0.5px;
   background-color: rgba(255, 255, 255, 1);
   width: 100%;
   margin-top: 20px;
-  opacity: 0.4;
+  opacity: 0.5;
 }
 .menu {
   display: flex;
