@@ -91,6 +91,9 @@ export const QrSection = () => {
         </>
       ) : (
         <div className={styles.wrapper}>
+          {/* <div>
+            <Image src={illustration} alt="" className={styles.illustration} />
+          </div> */}
           <div className={styles.firstRow}>
             <span className={styles.title}>Satisfy Your Cravings</span>
             <Image src={foodMobile} alt="foodSection" className={styles.food} />

@@ -15,10 +15,9 @@ import cart from "../../../public/assets/cart.svg";
 import wigly from "../../../public/assets/wigly.svg";
 import { DropDown } from "@components/dropDown";
 import { useDropdown } from "src/context/dropdownContext";
+import Sidebar from "../sidebar";
 
 export const LandingHeader: React.FC = () => {
-  const [openHamburger, setOpenHamburger] = useState(false);
-  const [isHidden, setIsHidden] = useState(false);
   const { toggleDropdown, closeDropdown } = useDropdown();
   const router = useRouter();
   const { pathname } = router;
@@ -144,20 +143,9 @@ export const LandingHeader: React.FC = () => {
           Store
         </Link>
       </div>
-
-      <Image
-        key={Number(openHamburger)}
-        src={hamburger}
-        alt="menu"
-        width={32}
-        onClick={() => {
-          setOpenHamburger((prev) => !prev);
-          toggleDropdown();
-        }}
-        className={`${styles.burger} ${
-          openHamburger ? styles.moveBurger : styles.showBurger
-        }`}
-      />
+      <div className={styles.sidebar}>
+        <Sidebar />
+      </div>
     </div>
   );
 };

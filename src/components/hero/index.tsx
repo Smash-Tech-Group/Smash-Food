@@ -47,7 +47,7 @@ export const Hero = () => {
       <div className={styles.heroImage}>
         <Heroimage />
       </div>
-      <div className={styles.blur}></div>
+      {/* <div className={styles.blur}></div> */}
 
       <div className={styles.buttons}>
         <Link href="" className={styles.playstoreButton}>

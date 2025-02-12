@@ -85,6 +85,9 @@
 .hamburgerMenu {
   display: none;
 }
+.sidebar {
+  display: none;
+}
 
 @media (max-width: 480px) {
   .buttons {
@@ -129,6 +132,10 @@
   .moveBurger {
     animation: moveBurgerAnimation 1s ease-in-out alternate;
   }
+
+  .sidebar {
+    display: block;
+  }
 }
 
 @media (min-width: 481px) and (max-width: 1024px) {
@@ -148,6 +155,9 @@
   .logo {
     width: 180px;
     height: 50%;
+  }
+  .sidebar {
+    display: block;
   }
 }
 @media (min-width: 1890px) {

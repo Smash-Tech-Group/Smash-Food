@@ -87,6 +87,9 @@
   .container {
     padding-bottom: 20px;
   }
+  .wrapper {
+    padding-top: 50px;
+  }
   .food {
     width: 100px;
     max-height: 100px;
@@ -132,6 +135,9 @@
 
   .firstRow {
     max-height: 100px;
+  }
+  .illustration {
+    transform: translateY(75%);
   }
 }
 
