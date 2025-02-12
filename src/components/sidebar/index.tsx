@@ -98,7 +98,6 @@ const Navigation = () => (
 /**
  * ==============   Menu Item Component   ================
  */
-const colors = ["#FF008C", "#D309E1", "#9C1AFF", "#7700FF", "#4400FF"];
 
 const MenuItem = ({ menu }: { menu: { icon: any; title: string } }) => {
   return (
@@ -229,7 +228,7 @@ const useDimensions = (ref: React.RefObject<HTMLDivElement | null>) => {
  * ==============   Styles   ================
  */
 const container: React.CSSProperties = {
-  position: "relative", // Ensures it covers the whole page
+  position: "absolute", // Ensures it covers the whole page
   top: 0,
   right: 0,
 
