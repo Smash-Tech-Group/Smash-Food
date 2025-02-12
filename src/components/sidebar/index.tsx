@@ -20,19 +20,13 @@ export default function Sidebar() {
   const [isOpen, setIsOpen] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
   const { height } = useDimensions(containerRef);
+  const [isMounted, setIsMounted] = useState(false);
 
-  // Prevent scrolling when sidebar is open
   useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-    }
+    setIsMounted(true);
+  }, []);
 
-    return () => {
-      document.body.style.overflow = ""; // Reset overflow when unmounting
-    };
-  }, [isOpen]);
+  if (!isMounted) return null; // Avoid rendering on the server
 
   return (
     <div className={styles.container}>
@@ -212,16 +206,18 @@ const itemVariants = {
  * ==============   Custom Hook for Measuring Dimensions   ================
  */
 const useDimensions = (ref: React.RefObject<HTMLDivElement | null>) => {
-  const dimensions = useRef({ width: 0, height: 0 });
+  const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
 
   useEffect(() => {
     if (ref.current) {
-      dimensions.current.width = ref.current.offsetWidth;
-      dimensions.current.height = ref.current.offsetHeight;
+      setDimensions({
+        width: ref.current.offsetWidth,
+        height: ref.current.offsetHeight,
+      });
     }
   }, [ref]);
 
-  return dimensions.current;
+  return dimensions;
 };
 
 /**
