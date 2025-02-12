@@ -35,19 +35,19 @@ export default function Sidebar() {
   }, [isOpen]);
 
   return (
-    <div style={container}>
+    <div className={styles.container}>
       <motion.nav
         initial={false}
         animate={isOpen ? "open" : "closed"}
         custom={height}
         ref={containerRef}
-        style={nav}
+        className={styles.nav}
       >
         <motion.div
           style={{
-            ...background,
             opacity: isOpen ? 1 : 0, // Show background only when open
           }}
+          className={styles.background}
           variants={sidebarVariants}
         />
         <Navigation />
@@ -227,15 +227,6 @@ const useDimensions = (ref: React.RefObject<HTMLDivElement | null>) => {
 /**
  * ==============   Styles   ================
  */
-const container: React.CSSProperties = {
-  position: "absolute", // Ensures it covers the whole page
-  top: 0,
-  right: 0,
-
-  display: "flex",
-
-  zIndex: 1000,
-};
 
 const nav: React.CSSProperties = {
   width: "100%",
