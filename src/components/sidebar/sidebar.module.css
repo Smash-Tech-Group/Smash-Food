@@ -30,24 +30,9 @@
   transition: opacity 0.3s ease;
 }
 
-/* .open {
-  opacity: 1;
-  width: 100vw;
-  height: 100vh;
-  top: 0;
-  right: 0;
-  border-radius: 0;
-
-  pointer-events: all;
-} */
-/* .hamburgerInside {
-  position: absolute;
-  top: 45px;
-  right: 60px;
-  opacity: 0;
-  transform: translateY(-50px);
-  transition: transform 0.4s ease-in-out, opacity 0.3s ease-in-out; 
-}  */
+.open {
+  overflow: hidden;
+}
 
 .showBurger {
   opacity: 1;

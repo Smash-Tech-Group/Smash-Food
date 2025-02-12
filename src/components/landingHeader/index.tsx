@@ -3,17 +3,11 @@ import styles from "./landingHeader.module.css";
 import { Icon } from "@components/icon";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import hamburger from "../../../public/assets/hambuger.svg";
-import openhamburger from "../../../public/assets/openhamburger.svg";
-import cancel from "../../../public/assets/cancel.svg"; // Assuming you have a cancel image
 import Image from "next/image";
-import { Button } from "@components";
-import { useMedia } from "react-use";
 import { useScroll } from "../../hooks/useScroll";
 import logo from "../../../public/assets/logo.png";
 import cart from "../../../public/assets/cart.svg";
 import wigly from "../../../public/assets/wigly.svg";
-import { DropDown } from "@components/dropDown";
 import { useDropdown } from "src/context/dropdownContext";
 import Sidebar from "../sidebar";
 
